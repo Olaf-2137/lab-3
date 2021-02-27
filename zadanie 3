@@ -1,0 +1,31 @@
+package sample;
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static int[] adding(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Podaj wielkosc macierzy: ");
+        int size = scan.nextInt();
+        int[] ar1 = new int[size], ar2 = new int[size], ar3 = new int[size];
+        //-----------------------------------------------------------------------
+        //macież 1
+        for (int i=0; i < size;i++){
+            System.out.println("Podaj liczbe na pozycji array1["+i+"]");
+            ar1[i] = scan.nextInt();
+        } //-----------------------------------------------------------------------
+        ///macież 2
+        for (int i=0; i < size;i++){
+            System.out.println("Podaj liczbe na pozycji array2["+i+"]");
+            ar2[i] = scan.nextInt();
+        } //-----------------------------------------------------------------------
+        //outcome
+        for (int i=0; i < size;i++){
+            ar3[i] = ar1[i] + ar2[i];
+        } 
+        return ar3;
+    } //-----------------------------------------------------------------------
+    //wynik
+    public static void main(String[] args) {
+        System.out.print("Wynik: "+Arrays.toString(adding()));
+    }
+}
